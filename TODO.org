@@ -7,4 +7,8 @@
   - Planning and assigning tasks
     
 * Tasks
-  - 
+** Frontend
+   - Sarvesh
+** Backend
+   - Nishanth
+

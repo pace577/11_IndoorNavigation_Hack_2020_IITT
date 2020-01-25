@@ -1,10 +1,31 @@
-#+TITLE: Planning
+#+TITLE: App Structure
 
-* Things to do before starting
-  - Know what everyone knows, so it will be easier to assign tasks.
-  - Confirm design, approach and tech stack
-  - Introduction to git
-  - Planning and assigning tasks
+* Layout/Frontend
+
+** Home Page
+   - Contains maps that has markers for places that have indoor maps
+** IndoorMap Page
+   - Must be displayed after clicking on a marker
+
+   - Will show the map of the place previously clicked upon
+   - Must ask for source and destination
+   - Should visualise the path finding feature
+   - Should contain floor selecting panel
+
+*** Floor selecting panel
+    - Must display options to select all available floors
+    - Switch to a particular floor after selecting that number.
+      
+*** Path finding feature
+    - Should define a path from source to destination and give info to IndoorMap to display
     
-* Tasks
-  - 
+* Backend
+  - Stores data of all indoor maps
+  - Must provide the frontend with the map data whenever requested
+    
+* Tech Stack
+  - Backend: Django REST
+  - Frontend: React Framework
+  - Debugging: Firefox/Chrome
+  - Git for collaboration
+    
