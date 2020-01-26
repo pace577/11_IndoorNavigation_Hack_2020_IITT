@@ -23,7 +23,8 @@ urlpatterns = [
     #path(r'^data.geojson$', GeoJSONLayerView.as_view(model=IndoorObject), name='data'), #FIND OUT WHAT THIS IS DOING!
     url(r'^.sqlite3$', GeoJSONLayerView.as_view(model=IndoorObject), name='data'),
     path('indoormap/<str:lat>/<str:lng>/',views.viewmap,name='lat-lng'),  
-    path('image_conversion/',views.image_conversion,name='image_conversion'),
+    path('image_conversion/',views.image_conversion2,name='image_conversion'),
+    path('path_finder/',views.path_finder,name='path_finder'),
  ] 
 
 

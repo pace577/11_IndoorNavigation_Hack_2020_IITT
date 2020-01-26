@@ -41,7 +41,6 @@
 		L.geoJSON(data).on('click', function(ev) {
 		    console.log(ev);
 
-		    window.location= '{% url "image_conversion" %}';
 		    window.location="/indoormap/"+ev.latlng.lat+"/"+ev.latlng.lng;
 		}).addTo(map);
 	    });

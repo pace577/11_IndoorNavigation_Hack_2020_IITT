@@ -57,6 +57,6 @@ def image_conversion2(request):
         cv2.destroyAllWindows()
         return render(request,"path_finder.html",{})
 
-def image_conversion(request):
+def path_finder(request):
 
         return render(request,"path_finder.html",{})
