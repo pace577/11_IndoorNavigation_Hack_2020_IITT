@@ -1,0 +1,23 @@
+{% extends 'base.html' %}  
+{% load static %}
+{% block title %}Welcome{% endblock %}
+
+ {% block content %}   
+ <br>
+<div class="jumbotron"  style="background-color:#e6f2ff;">
+  <h1 class="display-4">Welcome to Snapps Indoor Navigation</h1>
+  <p class="lead">Snapps is an Indoor Navigation tool developed as a software project by IIT Tirupati students Snegha,Nishanth,Akanksh,Prabhat,Pranav, and Sarvesh</p>
+  <hr class="my-4">
+  <p>It uses Bluetooth Beacons to accurately navigate inside a building</p>
+  <a class="btn btn-primary btn-lg" href="testimonials" role="button">Boys Hostel-A</a>
+  <button action="/create_data" method="POST" /> 
+
+</div>
+ 
+   
+<br>
+  
+ 
+
+ {% endblock %}
+ 

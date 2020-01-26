@@ -1,0 +1,54 @@
+{% load leaflet_tags %}
+<html>
+  <head>
+    {% leaflet_js %}
+    
+    {% leaflet_css %}
+    <style>
+
+    .leaflet-container {  /* all maps */
+        width:  90%;
+        height: 90%;
+    }
+
+    #specialbigmap {
+        height: 90%;
+    }
+
+    /* Resize the "display_raw" textbox */
+    .django-leaflet-raw-textarea {
+        width: 100%;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1>Maps</h1>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        function main_map_init (map, options) {
+            // Use Leaflet API here
+
+
+	    L.marker([50.5, 30.5],{"interactive":true}).addTo(map);
+
+
+	    var dataurl = '{% url "data" %}';
+	    // Download GeoJSON via Ajax
+	    $.getJSON(dataurl, function (data) {
+		// Add GeoJSON layer
+		L.geoJSON(data).on('click', function(ev) {
+		    console.log(ev);
+
+		    window.location= '{% url "image_conversion" %}';
+		    window.location="/indoormap/"+ev.latlng.lat+"/"+ev.latlng.lng;
+		}).addTo(map);
+	    });
+
+
+        }
+    </script>
+    {% leaflet_map "main" callback="main_map_init" %}
+  </body>
+</html>

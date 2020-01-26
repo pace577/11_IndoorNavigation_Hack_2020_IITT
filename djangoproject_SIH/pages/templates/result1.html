@@ -1,0 +1,39 @@
+{% extends 'base.html' %}   
+ {% load static %}
+{% block title %}About Sarvesh{% endblock %}
+ {% block content %} 
+ <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="indonavi">A</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+ 
+</style>  
+<h2 onclick="showCoords(event)"> <p> <center> <img src="{% static 'images/BW.png'%}" alt="Trulli" width="1100 " height="700"></center></p>  
+<p id="demo"></p>
+<hr>
+<script>
+function showCoords(event) {
+  var x = event.clientX;
+  var y = event.clientY-178 ;
+  var coords = "X coords: " + x + ", Y coords: " + y;
+  document.getElementById("demo").innerHTML = coords;
+} 
+
+</script>
+
+
+
+ 
+
+ 
+          <h5 class="card-title"><div class="alert alert-primary" role="alert">
+          Ground Floor  
+
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}   
+ {% load static %}
+{% block title %}About Sarvesh{% endblock %}
+ {% block content %} 
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1"><strong>Name of the student</strong></label>
+    <input type="email" class="form-control" id="exampleFormControlInput1"  
+  <div class="form-group">
+    <label for="exampleFormControlSelect2"><strong> Select board</strong></label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>State Board</option>
+      <option>CBSE Board</option>
+       
+     
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2"><strong> Select standard</strong></label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+     
+    </select> 
+    <div class="form-group">
+    <label for="exampleFormControlSelect2"><strong> Select school</strong></label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>Manik Memorial Aryan School</option>
+      <option>Sacred Hearts School</option>
+      <option>Sarajudevi Vidyalaya</option>
+      <option>Bharatiya Vidyamandir</option>
+      <option>Others</option>
+    </select> 
+     <div class="form-group">
+    <label for="exampleFormControlInput1"><strong>Contact No.</strong></label>
+    <input type="email" class="form-control" id="exampleFormControlInput1"  
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1"><strong>Address</strong></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</form> 
+{% endblock %}

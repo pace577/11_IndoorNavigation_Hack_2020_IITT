@@ -1,0 +1,29 @@
+ {% extends 'base.html' %}  
+{% load static %}
+{% block title %}Welcome{% endblock %}
+
+ {% block content %}      
+<div>
+ <div class="row">
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Ground Floor</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">First Floor</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Second Floor</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Third Floor</a>
+    </div>
+  </div> 
+
+  <div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">  <img src="{% static 'images/frt.dwg'%}" class="card-img" alt="...">
+      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"><strong>IIT Tirupati</strong><br><a href="https://www.google.co.in/maps/place/IIT+Tirupati+Permanent+Campus/@13.7058641,79.5951016,21z/data=!4m5!3m4!1s0x3a4d38684f46d32f:0xb9bfb19ad6c07650!8m2!3d13.7057683!4d79.5951962?hl=en&authuser=0">Click here to open in Google Maps</a></br></div>
+      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">  <strong>Email ID 1:</strong><br>xyz@gmail.com<br></br><strong>Email ID 2:</strong><br>abc@gmail.com<br></br><strong> </strong><br> <br></br></div>
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><strong><br>Snapps is an Indoor Navigation tool developed as a software project by IIT Tirupati students Snegha,Nishanth,Akanksh,Prabhat,Pranav, and Sarvesh<br>    <br> <br> </br></div></strong>
+    </div>
+  </div>
+</div>
+
+</div>
+ {% endblock %}
+ 
