@@ -24,8 +24,7 @@
   - Must provide the frontend with the map data whenever requested
     
 * Tech Stack
-  - Backend: Django REST
-  - Frontend: React Framework
+  - Web Framework: Django 
   - Debugging: Firefox/Chrome
   - Git for collaboration
     
