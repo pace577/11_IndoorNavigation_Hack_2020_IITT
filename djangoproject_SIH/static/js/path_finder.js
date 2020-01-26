@@ -117,7 +117,7 @@ function Spot(i,j){
 		rect(this.i*w,this.j*h,w,h);
 		}
 
-	}
+	};
 
 	this.addNeighbours = function(grid){
 		var i = this.i;
@@ -147,22 +147,22 @@ function Spot(i,j){
 			this.neighbours.push(grid[i+1][j+1]);
 		}		
 		
-	}
+	};
 }
 
 function setup(){
-	openSet=[]
-	closeSet=[]
-	path=[]
-	var sti = int(document.forms['form1']['starti'].value)
-	var stj = int(document.forms['form1']['startj'].value)
-	var eni = int(document.forms['form1']['endi'].value)
-	var enj = int(document.forms['form1']['endj'].value)
-	Spot(sti,stj)
-	console.log(sti)
-	console.log(stj)
-	console.log(eni)
-	console.log(enj)
+    openSet=[];
+    closeSet=[];
+    path=[];
+    var sti = parseInt(document.getElementsByTagName('input').starti.value);
+    var stj = parseInt(document.getElementsByTagName('input').startj.value);
+    var eni = parseInt(document.getElementsByTagName('input').endi.value);
+    var enj = parseInt(document.getElementsByTagName('input').endj.value);
+    Spot(sti,stj);
+    console.log(sti);
+    console.log(stj);
+    console.log(eni);
+    console.log(enj);
 	createCanvas(600,600);
 	w = width /cols;
 	h = height/ rows;
